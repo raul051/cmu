@@ -18,26 +18,62 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children:[
               _logo(),
-              _btnapoyo(),
+              _btnacciones(),
               
             ]
           ),
         )
       ),
-      //backgroundColor: Color(0x31807F7F),
+      backgroundColor: Color(0x31807F7F),
     );
   }
 
- Widget _btnapoyo() {
-   return Container(
-     margin: EdgeInsetsDirectional.only(bottom: 20),
-     width: MediaQuery.of(context).size.width * 0.88,
-     height: 700,
-     decoration: BoxDecoration(
-       borderRadius: BorderRadius.circular(10),
-       color: Colors.green[600]
-     ),
-     child: Text("Aqui estaran los botones"),
+ Widget _btnacciones() {
+   return Table(
+       children: [
+         TableRow(
+          children: [
+            _crearBotonRedondeado(
+              icon: Icons.account_circle,
+              colorFondo:Color(0x71EF6C00),
+              colorCirculo: Color(0xff008651),
+              titulo: 'Gestión de usuarios',
+            ),
+            _crearBotonRedondeado(
+              icon: Icons.mail,
+              colorFondo:Color(0x71008650),
+              colorCirculo: Color(0xFFEF6C00),
+              titulo: 'Buzón de aclaraciones',
+            ),
+          ]
+         ),
+         
+       ],
+   );
+ }
+
+ Widget _crearBotonRedondeado({IconData icon, Color colorFondo, Color colorCirculo, String titulo}) {
+      return Container(
+         height: 180.0,
+         margin: EdgeInsets.all(15.0),
+         decoration: BoxDecoration(
+           color: colorFondo, //Color.fromRGBO(65, 66, 107, 0.7),
+           borderRadius: BorderRadius.circular(20.0)
+         ),
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children:<Widget>[
+          SizedBox(height: 5.0,),
+           CircleAvatar(
+             backgroundColor: colorCirculo,
+             radius:35.0,
+             child: Icon(icon, color: Colors.white, size:40)
+           ),
+          
+           Text(titulo, style: TextStyle(color: Colors.white),),
+            SizedBox(height: 5.0,),
+           ],
+         ),
    );
  }
 

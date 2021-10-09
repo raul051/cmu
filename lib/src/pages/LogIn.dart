@@ -20,16 +20,12 @@ class _LogInPageState extends State<LogInPage> {
           child: Column(
             children:[
               _logo(),
-              _cajaMail(),
-              SizedBox( height: 27),
-              _cajaPass(),
-              SizedBox( height: 35),
-              _btnLogIng()
+              _LoginForm(),
             ]
           ),
         )
       ),
-      //backgroundColor: Color(0x31807F7F),
+      backgroundColor: Color(0x31807F7F),
     );
   }
 
@@ -40,76 +36,78 @@ class _LogInPageState extends State<LogInPage> {
    );
  }
 
+}
+
+
+class _LoginForm extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Form(
+        child: Column(
+          children: [
+            _cajaMail(),
+            SizedBox(height: 35),
+            _cajaPass(),
+          ],
+        ),
+      )
+    );
+  }
+
+  _cajaMail() {
+    return Container(
+              decoration: BoxDecoration(
+                color:Color(0x31807F7F),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              width: 300,
+              child: TextFormField(
+                autocorrect: false,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.only(top: 14.0),
+                prefixIcon: Icon(
+                  Icons.mail,
+                  color: Color(0xffEF6C00),
+                ),
+                hintText: 'ejemplo@ejemplo.com',
+                hintStyle: TextStyle(
+                  color: Colors.black54,
+                  fontFamily: 'OpenSans',
+                  ),
+                ),
+              ),
+            );
+  }
+
  Widget _cajaPass() {
    return Container(
-     decoration: BoxDecoration(
-       color:Color(0x31807F7F),
-       borderRadius: BorderRadius.circular(50),
-     ),
-     width: 300,
-     child: TextField(
-       obscureText: true,
-            style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'OpenSans',
-            ),
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.lock,
-                color: Color(0xffEF6C00),
+              decoration: BoxDecoration(
+                color:Color(0x31807F7F),
+                borderRadius: BorderRadius.circular(50),
               ),
-              hintText: 'Ingresa tu contraseña',
-              hintStyle: TextStyle(
-              color: Colors.black54,
-              fontFamily: 'OpenSans',
+              width: 300,
+              child: TextFormField(
+                obscureText: true,
+                autocorrect: false,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                border: InputBorder.none,
+                contentPadding: EdgeInsets.only(top: 14.0),
+                prefixIcon: Icon(
+                  Icons.lock,
+                  color: Color(0xffEF6C00),
+                ),
+                hintText: 'password',
+                hintStyle: TextStyle(
+                  color: Colors.black54,
+                  fontFamily: 'OpenSans',
+                  ),
+                ),
               ),
-            ),
-
-     )
-   );
+            );
  }
-
- Widget _cajaMail() {
-   return Container(
-     decoration: BoxDecoration(
-       color:Color(0x31807F7F),
-       borderRadius: BorderRadius.circular(50),
-     ),
-     width: 300,
-     child: TextField(
-            style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'OpenSans',
-            ),
-            decoration: InputDecoration(
-              border: InputBorder.none,
-              contentPadding: EdgeInsets.only(top: 14.0),
-              prefixIcon: Icon(
-                Icons.mail,
-                color: Color(0xffEF6C00),
-              ),
-              hintText: 'Ingresa tu Correo electronico',
-              hintStyle: TextStyle(
-              color: Colors.black54,
-              fontFamily: 'OpenSans',
-              ),
-            ),
-
-     )
-   );
- }
-
- Widget _btnLogIng(){
-   final ButtonStyle style =
-        ElevatedButton.styleFrom(textStyle: const TextStyle(fontSize: 20), primary: Color(0xffEF6C00));
-   return ElevatedButton(
-            style: style,
-            onPressed: () { Navigator.push(context, MaterialPageRoute(
-          builder: (_) => HomePage() ));},
-            child: const Text('Ingresar'),
-          );
- }
-
 }

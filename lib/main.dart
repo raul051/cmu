@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           primaryColor: Colors.green[900],
-          accentColor: Colors.green[900]
+          accentColor: Colors.green[900],
         ),
       debugShowCheckedModeBanner: false,
       title: 'Material App',
