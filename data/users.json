@@ -1,0 +1,49 @@
+{
+    "nombreData"    :   "Usuarios",
+    "usuarios"      :   [
+        {
+            "nombreUser"    :   "Raúl Tamayo",
+            "edad"          :   "21",
+            "carrera"       :   "IDGS",
+            "domicilio"     :   "Huamantla",
+            "sexo"          :   "Masculino",
+            "Cuatrimestre"  :   "10",
+            "Matricula"     :   "20182iti035",
+            "email"         :   "raultamayobriones@gmail.com",
+            "password"      :   "12345678"
+        },
+        {
+            "nombreUser"    :   "Edwing Ruíz",
+            "edad"          :   "30",
+            "carrera"       :   "IDGS",
+            "domicilio"     :   "Apizaco",
+            "sexo"          :   "Masculino",
+            "Cuatrimestre"  :   "10",
+            "Matricula"     :   "20182iti039",
+            "email"         :   "edwingruiz@gmail.com",
+            "password"      :   "12345678"
+        },
+        {
+            "nombreUser"    :   "Jacobo Hernandez",
+            "edad"          :   "21",
+            "carrera"       :   "IDGS",
+            "domicilio"     :   "Huamantla",
+            "sexo"          :   "Masculino",
+            "Cuatrimestre"  :   "10",
+            "Matricula"     :   "20182iti020",
+            "email"         :   "jacobohm@gmail.com",
+            "password"      :   "12345678"
+        },
+        {
+            "nombreUser"    :   "Jafet Lima",
+            "edad"          :   "23",
+            "carrera"       :   "IDGS",
+            "domicilio"     :   "Santa Ana",
+            "sexo"          :   "Masculino",
+            "Cuatrimestre"  :   "10",
+            "Matricula"     :   "20182iti032",
+            "email"         :   "jafetlimaipatzi@gmail.com",
+            "password"      :   "12345678"
+        }
+    ]
+}
