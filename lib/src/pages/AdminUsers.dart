@@ -1,6 +1,8 @@
 import 'package:cmu/providers/users_provider.dart';
 import 'package:flutter/material.dart';
 
+import 'ResgistroUsersPage.dart';
+
 class AdminUsersPage extends StatelessWidget {
   const AdminUsersPage({Key key}) : super(key: key);
 
@@ -13,8 +15,10 @@ class AdminUsersPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color(0xff008651),
         child: Icon(Icons.add_circle_outline,size:40),
-        onPressed: (){},
-        ),
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute( builder: (_) => ResgistroUsersPage(), ));
+        },
+      ),
     );
   }
 
