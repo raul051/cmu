@@ -6,6 +6,9 @@ class BuzonAdminPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: Color(0xff008651),
+          title: Text("Buzón de peticiones")),
       body: Center(
         child: Text("Aquí va a estar el Buzón de peticiones"),
       ),

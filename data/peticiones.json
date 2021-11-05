@@ -1,0 +1,25 @@
+{
+    "nombreData"    :   "peticiones",
+    "peticiones"    :   [
+        {
+            "nombre"    :   "Raúl Tamayo",
+            "peticion"  :   "Este es el cuerpo de la petición",
+            "estado"    :   "Pendiente"
+        },
+        {
+            "nombre"    :   "Edwing Ruiz",
+            "peticion"  :   "Este es el cuerpo de la petición",
+            "estado"    :   "Pendiente"
+        },
+        {
+            "nombre"    :   "Jacobo Mendieta",
+            "peticion"  :   "Este es el cuerpo de la petición",
+            "estado"    :   "Pendiente"
+        },
+        {
+            "nombre"    :   "Jafet Lima",
+            "peticion"  :   "Este es el cuerpo de la petición",
+            "estado"    :   "Pendiente"
+        }
+    ]
+}
