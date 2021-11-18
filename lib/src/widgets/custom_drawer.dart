@@ -85,7 +85,7 @@ class DrawerPage extends StatelessWidget {
                         builder: (BuildContext context) => ProfilePage(),
                       ))),
               Divider(
-                color: Color(0xffa3a2a2),
+                color: Colors.red,
               ),
               ListTile(
                   leading: Icon(

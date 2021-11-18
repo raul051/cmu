@@ -11,22 +11,24 @@ class ProfilePage extends StatelessWidget {
       drawer: DrawerPage(),
       appBar: AppBar(
           backgroundColor: Color(0xff008651), title: Text("Perfil de usuario")),
-      body: Column(
-        children: [
-          _barravatar(context),
-          SizedBox(
-            height: 15,
-          ),
-          _dataosContacto(),
-          SizedBox(
-            height: 15,
-          ),
-          _datosEdu(),
-          SizedBox(
-            height: 70,
-          ),
-          _bottonpeticion(context)
-        ],
+      body: SafeArea(
+        child: Column(
+          children: [
+            _barravatar(context),
+            SizedBox(
+              height: 15,
+            ),
+            _dataosContacto(),
+            SizedBox(
+              height: 15,
+            ),
+            _datosEdu(),
+            SizedBox(
+              height: 70,
+            ),
+            _bottonpeticion(context)
+          ],
+        ),
       ),
     );
   }
@@ -100,8 +102,6 @@ class ProfilePage extends StatelessWidget {
                   "correo@correo.com",
                   style: TextStyle(fontSize: 18),
                 ),
-                trailing:
-                    Icon(Icons.arrow_forward_ios, color: Color(0xff008651)),
                 leading: Icon(Icons.mail, color: Colors.white),
                 onTap: () {},
               ),
@@ -113,8 +113,6 @@ class ProfilePage extends StatelessWidget {
                   "247xxxx200",
                   style: TextStyle(fontSize: 18),
                 ),
-                trailing:
-                    Icon(Icons.arrow_forward_ios, color: Color(0xff008651)),
                 leading: Icon(Icons.phone, color: Colors.white),
                 onTap: () {},
               ),
@@ -149,8 +147,6 @@ class ProfilePage extends StatelessWidget {
                   "IDGS",
                   style: TextStyle(fontSize: 18),
                 ),
-                trailing:
-                    Icon(Icons.arrow_forward_ios, color: Color(0xff008651)),
                 leading: Icon(Icons.book_rounded, color: Colors.white),
                 onTap: () {},
               ),
@@ -162,8 +158,6 @@ class ProfilePage extends StatelessWidget {
                   "20182ITI035",
                   style: TextStyle(fontSize: 18),
                 ),
-                trailing:
-                    Icon(Icons.arrow_forward_ios, color: Color(0xff008651)),
                 leading: Icon(Icons.account_circle, color: Colors.white),
                 onTap: () {},
               ),
