@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'src/pages/alumnos/home_page.dart';
 import 'src/pages/alumnos/logIn_page_prueba.dart';
 import 'src/pages/logIn_page.dart';
+import 'src/pages/status_socket.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,12 +17,13 @@ class MyApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        initialRoute: 'LogInPrueba',
+        initialRoute: 'SplashScreen',
         routes: {
           'LogInPrueba': (_) => LogInPagePrueba(),
           'SplashScreen': (_) => SplashScreen(),
           'HomeAlumnos': (_) => HomePageAlumnos(),
           'Login': (_) => LogInPage(),
+          'status': (_) => StatusPage(),
         });
   }
 }

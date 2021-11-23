@@ -1,7 +1,9 @@
 import 'package:cmu/api/api_Service.dart';
+import 'package:cmu/api/socket_service.dart';
 import 'package:cmu/models/login_model.dart';
 import 'package:cmu/src/widgets/progressHUD.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class LogInPagePrueba extends StatefulWidget {
   @override
